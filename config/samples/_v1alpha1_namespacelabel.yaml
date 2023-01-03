@@ -1,0 +1,12 @@
+apiVersion: dana.io.dana.io/v1alpha1
+kind: NamespaceLabel
+metadata:
+  labels:
+  namespace: example-namespace
+  name: namespacelabel-sample
+spec:
+  labels:
+        one: one
+        two: two
+        m: h
+        f: c
