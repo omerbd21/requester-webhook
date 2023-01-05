@@ -20,8 +20,7 @@ import (
 	"flag"
 	"os"
 
-	danaiodanaiov1alpha1 "danaiodanaio/omerbd21/namespacelabel-operator/api/v1alpha1"
-	"danaiodanaio/omerbd21/namespacelabel-operator/internal"
+	"bendaio/omerbd21/requester-webhook/internal"
 
 	"github.com/go-logr/zapr"
 	ecszap "go.elastic.co/ecszap"
@@ -44,14 +43,13 @@ var (
 
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
-	utilruntime.Must(danaiodanaiov1alpha1.AddToScheme(scheme))
+	//utilruntime.Must(bendaio.AddToScheme(scheme))
 }
 
 func main() {
 	var metricsAddr string
 	var enableLeaderElection bool
 	var probeAddr string
-	var protectedPrefixes string
 	flag.StringVar(&metricsAddr, "metrics-bind-address", ":8080", "The address the metric endpoint binds to.")
 	flag.StringVar(&probeAddr, "health-probe-bind-address", ":8081", "The address the probe endpoint binds to.")
 	flag.BoolVar(&enableLeaderElection, "leader-elect", false,

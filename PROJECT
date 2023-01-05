@@ -4,8 +4,8 @@ layout:
 plugins:
   manifests.sdk.operatorframework.io/v2: {}
   scorecard.sdk.operatorframework.io/v2: {}
-projectName: namespacelabel-operator
-repo: github.com/omerbd21/namespacelabel-operator
+projectName: requester-webhook
+repo: github.com/omerbd21/requester-webhook
 resources:
 - api:
     crdVersion: v1
@@ -13,7 +13,7 @@ resources:
   controller: true
   domain: dana.io.dana.io
   kind: NamespaceLabel
-  path: github.com/omerbd21/namespacelabel-operator/api/v1alpha1
+  path: github.com/omerbd21/requester-webhook/api/v1alpha1
   version: v1alpha1
   webhooks:
     defaulting: true

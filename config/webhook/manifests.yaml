@@ -11,17 +11,18 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /validate-v1-namespacelabel
+      path: /validate-v1-namespace
   failurePolicy: Fail
-  name: vnamespacelabel.kb.io
+  name: vnamespace.kb.io
   rules:
   - apiGroups:
-    - dana.io.dana.io
+    - ""
     apiVersions:
-    - v1alpha1
+    - v1
     operations:
     - CREATE
     - UPDATE
+    - DELETE
     resources:
-    - namespacelabels
+    - namespaces
   sideEffects: None

@@ -4,7 +4,7 @@ metadata:
   annotations:
     alm-examples: '[]'
     capabilities: Basic Install
-  name: namespacelabel-operator.v0.0.0
+  name: requester-webhook.v0.0.0
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -38,7 +38,7 @@ spec:
   - label
   links:
   - name: Namespacelabel Operator
-    url: https://namespacelabel-operator.domain
+    url: https://requester-webhook.domain
   maintainers:
   - email: omerbendavid21@gmail.com
     name: omer ben david
